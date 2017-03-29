@@ -1,0 +1,10 @@
+My Legislators Web App
+**********************
+
+Using the Sunlight Congress API users will be able to search for and view information regarding their legislators
+https://sunlightlabs.github.io/congress
+
+Using the API
+*************
+https://congress.api.sunlightfoundation.com/[method]
+
