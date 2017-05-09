@@ -72,7 +72,7 @@ h2 {
 
 form {
 	display: table-cell;
-	text-align: center;
+	text-align: right;
 	vertical-align: middle;
 	border-radius: 3px;
 }
@@ -89,10 +89,11 @@ form {
   white-space: nowrap;
   text-overflow: ellipsis;
   outline: none;
+  margin-right: 10px;
 }
 
 #submitBtn {
-	visibility: hidden;
+	display: none;
 }
 
 .tooltip {
