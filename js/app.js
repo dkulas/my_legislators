@@ -15,6 +15,18 @@ function fetchData() {
 
     console.log(data);
 
+    var dataResults = data.results;
+    var dataResultsArray = [];
+
+    for (var i in dataResults) {
+      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"]});
+    };
+
+    console.log(dataResultsArray);
+
+  })
+  .catch(function(error) {
+    console.log(error);
   });
 };
 
