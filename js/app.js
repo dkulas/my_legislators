@@ -19,7 +19,7 @@ function fetchData() {
     var dataResultsArray = [];
 
     for (var i in dataResults) {
-      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"]});
+      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"], facebook_id: dataResults[i]["facebook_id"], party: dataResults[i]["party"], termStart: dataResults[i]["term_start"], termEnd: dataResults[i]["term_end"], tile: dataResults[i]["title"], twitterID: dataResults[i]["twitter_id"], website: dataResults[i]["website"]});
     };
 
     console.log(dataResultsArray);
