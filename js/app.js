@@ -1,3 +1,5 @@
+var submitBtn = document.getElementById("submitBtn");
+
 // Check if Fetch is available
 (function checkFetch() {
   if (self.fetch) {
@@ -7,9 +9,14 @@
   }
 })();
 
+// Isolate zipcode
+function getZipcode() {
+  return document.getElementById("zipcodeInput").value;
+};
+
 // Fetch Data
 function fetchData() {
-  fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=48301")
+  fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode())
   .then(data => data.json())
   .then(data => {
 
@@ -19,7 +26,7 @@ function fetchData() {
     var dataResultsArray = [];
 
     for (var i in dataResults) {
-      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"], facebook_id: dataResults[i]["facebook_id"], party: dataResults[i]["party"], termStart: dataResults[i]["term_start"], termEnd: dataResults[i]["term_end"], tile: dataResults[i]["title"], twitterID: dataResults[i]["twitter_id"], website: dataResults[i]["website"]});
+      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"], facebook_id: dataResults[i]["facebook_id"], party: dataResults[i]["party"], termStart: dataResults[i]["term_start"], termEnd: dataResults[i]["term_end"], tile: dataResults[i]["title"], twitterID: dataResults[i]["twitter_id"], website: dataResults[i]["website"], state_name: dataResults[i]["state_name"]});
     };
 
     console.log(dataResultsArray);
@@ -30,4 +37,17 @@ function fetchData() {
   });
 };
 
-fetchData();
+// Clear data on subsequent calls
+function clearData() {
+  // document.getElementsByTagName("h1").innerHTML = "";
+  // document.getElementsByTagName("img").innerHTML = "";
+  // document.getElementsByTagName("li").innerHTML = "";
+  // document.getElementsByTagName("p").innerHTML = "";
+}
+
+// Initialize program
+submitBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  fetchData();
+  // clearData();
+});
