@@ -119,3 +119,14 @@ form {
   z-index: 98;
   width: 220px;
 }
+
+#questionMark {
+	display: inline-block;
+  font-size: 2em;
+  font-weight: 900;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  cursor: pointer;
+  color: #FFF;
+}
