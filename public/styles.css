@@ -58,6 +58,7 @@ header {
 	height: 50px;
 	background: black;
 	display: table;
+	border-bottom: 2px solid lightgray;
 }
 
 h2 {
