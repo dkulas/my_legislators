@@ -53,12 +53,16 @@ table {
 /*******************/
 /*******************/
 
+body {
+	background-color: #EF6461;
+}
+
 header {
 	width: 100%;
 	height: 50px;
-	background: black;
+	background: #313638;
 	display: table;
-	border-bottom: 2px solid lightgray;
+	border-bottom: 2px solid #E0DFD5;
 }
 
 h2 {
