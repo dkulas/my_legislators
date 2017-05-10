@@ -40,11 +40,8 @@ function fetchData() {
 
 // Clear data on subsequent calls
 function clearData() {
-  // document.getElementsByTagName("h1").innerHTML = "";
-  // document.getElementsByTagName("img").innerHTML = "";
-  // document.getElementsByTagName("li").innerHTML = "";
-  // document.getElementsByTagName("p").innerHTML = "";
-}
+  document.getElementsByTagName("li").innerHTML = "";
+};
 
 // Initialize program
 submitBtn.addEventListener("click", function(e) {
