@@ -37,8 +37,8 @@ function fetchData() {
       resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
       resultsList.innerHTML += "<li><strong>Email</strong>: <a href=mailto:" + dataResults[i]["oc_email"] + ">" + dataResults[i]["oc_email"] + "</a></li>";
       resultsList.innerHTML += "<li><strong>Website</strong>: " + dataResults[i]["website"] + "</li>";
-      resultsList.innerHTML += "<li><strong>Facebook</strong>: " + dataResults[i]["facebook_id"] + "</li>";
-      resultsList.innerHTML += "<li><strong>Twitter</strong>: " + dataResults[i]["twitter_id"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=www.facebook.com/" + dataResults[i]["facebook_id"] + " target='_blank'>Facebook</a></li>";
+      resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=www.twitter.com/" + dataResults[i]["twitter_id"] + " target='_blank'>Twitter</a></li>";
       resultsList.innerHTML += "<li><br></li>";
     };
 
