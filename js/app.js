@@ -1,5 +1,4 @@
 var submitBtn = document.getElementById("submitBtn");
-var qButton = document.getElementById("questionMark");
 
 // Check if Fetch is available
 (function checkFetch() {
@@ -47,10 +46,5 @@ function clearData() {
 submitBtn.addEventListener("click", function(e) {
   e.preventDefault();
   fetchData();
-  // clearData();
-});
-
-qButton.addEventListener("click", function(e) {
-  e.preventDefault();
-  alert("Blah Blah \nBlah Blah");
+  clearData();
 });

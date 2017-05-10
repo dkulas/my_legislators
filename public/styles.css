@@ -120,13 +120,19 @@ form {
   width: 220px;
 }
 
-#questionMark {
-	display: inline-block;
-  font-size: 2em;
-  font-weight: 900;
+span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #FFF;
   position: absolute;
   bottom: 5px;
-  left: 5px;
-  cursor: pointer;
+  font-weight: 700;
+}
+
+a {
   color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
 }
