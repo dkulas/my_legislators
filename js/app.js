@@ -29,6 +29,13 @@ function fetchData() {
       dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"], facebook_id: dataResults[i]["facebook_id"], party: dataResults[i]["party"], termStart: dataResults[i]["term_start"], termEnd: dataResults[i]["term_end"], tile: dataResults[i]["title"], twitterID: dataResults[i]["twitter_id"], website: dataResults[i]["website"], state_name: dataResults[i]["state_name"]});
     };
 
+    // var tbody = document.getElementById("tableData");
+
+    for (var i in dataResultsArray) {
+      var resultsParagraph = document.getElementById("resultsP");
+      resultsParagraph.innerHTML += dataResultsArray[i]["fname"] + " ";
+    };
+
     console.log(dataResultsArray);
 
   })
@@ -39,7 +46,7 @@ function fetchData() {
 
 // Clear data on subsequent calls
 function clearData() {
-  // document.getElementsByTagName("li").innerHTML = "";
+  document.getElementById("resultsP").innerHTML = "";
 };
 
 // Initialize program

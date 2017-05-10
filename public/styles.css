@@ -120,19 +120,6 @@ form {
   width: 220px;
 }
 
-table {
-  margin: 50px auto;
-  font-family: sans-serif;
-  color: #FFF;
-  font-weight: 700;
-  border: 1px solid #FFF;
-  border-collapse: inherit;
-}
-
-th {
-  padding: 5px;
-}
-
 span {
   width: 100%;
   display: block;
