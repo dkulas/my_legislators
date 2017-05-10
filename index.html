@@ -9,22 +9,15 @@
 </head>
 <body>
 <header>
-  <h2>Legisearch</h2>
+  <h2>Legisearch</h2><!-- <span><a href="#">about</a> | <a href="#">contact</a> | 2017</span> -->
   <form id="getZip" method="get">
     <input type="text" name="zipcode" id="zipcodeInput" class="tooltip" placeholder="Find Legislaors" autofocus="true" autocomplete="off" title="Enter valid US zipcode">
     <input type="submit" form="getZip" value="&#8250;" id="submitBtn">
   </form>
 </header>
 
-<section>
-<p id="resultsP">
-  
-</p>
-</section>
-
-<span>
-  <a href="#">about</a> | <a href="#">contact</a> | 2017
-</span>
+<ul id="resultsUL">
+</ul>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>

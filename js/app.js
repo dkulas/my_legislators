@@ -21,20 +21,28 @@ function fetchData() {
   .then(data => {
 
     var dataResults = data.results;
-    var dataResultsArray = [];
+
+    console.log(dataResults);
 
     for (var i in dataResults) {
-      dataResultsArray.push({fname: dataResults[i]["first_name"], lname: dataResults[i]["last_name"], chamber: dataResults[i]["chamber"], phone: dataResults[i]["phone"], fax: dataResults[i]["fax"], email: dataResults[i]["oc_email"], facebook_id: dataResults[i]["facebook_id"], party: dataResults[i]["party"], termStart: dataResults[i]["term_start"], termEnd: dataResults[i]["term_end"], tile: dataResults[i]["title"], twitterID: dataResults[i]["twitter_id"], website: dataResults[i]["website"], state_name: dataResults[i]["state_name"]});
+      var resultsList = document.getElementById("resultsUL");
+      resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Title</strong>: " + dataResults[i]["title"] + "</li>";
+      resultsList.innerHTML += "<li><strong>State</strong>: " + dataResults[i]["state_name"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Term Start</strong>: " + dataResults[i]["term_start"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Term End</strong>: " + dataResults[i]["term_end"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Phone</strong>: " + "<a href='tel:+'" + dataResults[i]["phone"] + ">" + dataResults[i]["phone"] + "</a>" + "</li>";
+      resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Email</strong>: " + dataResults[i]["oc_email"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Website</strong>: " + dataResults[i]["website"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Facebook</strong>: " + dataResults[i]["facebook_id"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Twitter</strong>: " + dataResults[i]["twitter_id"] + "</li>";
+      resultsList.innerHTML += "<li><br></li>";
     };
 
-    // var tbody = document.getElementById("tableData");
-
-    for (var i in dataResultsArray) {
-      var resultsParagraph = document.getElementById("resultsP");
-      resultsParagraph.innerHTML += dataResultsArray[i]["fname"] + " ";
-    };
-
-    console.log(dataResultsArray);
+    var showResults = document.getElementById("resultsUL").style.display = "inline-block";
 
   })
   .catch(function(error) {
@@ -44,7 +52,7 @@ function fetchData() {
 
 // Clear data on subsequent calls
 function clearData() {
-  document.getElementById("resultsP").innerHTML = "";
+  document.getElementById("resultsUL").innerHTML = "";
 };
 
 // Initialize program
