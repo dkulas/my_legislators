@@ -39,7 +39,7 @@ function fetchData() {
 
 // Clear data on subsequent calls
 function clearData() {
-  document.getElementsByTagName("li").innerHTML = "";
+  // document.getElementsByTagName("li").innerHTML = "";
 };
 
 // Initialize program
