@@ -20,8 +20,6 @@ function fetchData() {
   .then(data => data.json())
   .then(data => {
 
-    console.log(data);
-
     var dataResults = data.results;
     var dataResultsArray = [];
 
