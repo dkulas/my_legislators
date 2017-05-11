@@ -38,8 +38,8 @@ function fetchData() {
       resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
       resultsList.innerHTML += "<li><strong>Email</strong>: <a href=mailto:" + dataResults[i]["oc_email"] + ">" + dataResults[i]["oc_email"] + "</a></li>";
       resultsList.innerHTML += "<li><strong>Website</strong>: " + dataResults[i]["website"] + "</li>";
-      // resultsList.innerHTML += "<li><strong>Facebook</strong>: " + dataResults[i]["facebook_id"] + "</li>";
-      resultsList.innerHTML += "<li><strong>Twitter</strong>: @" + dataResults[i]["twitter_id"] + "</li>";
+      resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=https://www.facebook.com/"  + dataResults[i]["facebook_id"] +  ">Facebook</a></li>";
+      resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
       resultsList.innerHTML += "<li><br></li>";
     };
 
