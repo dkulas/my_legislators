@@ -1,4 +1,5 @@
 var submitBtn = document.getElementById("submitBtn");
+var h2 = document.getElementById("h2");
 
 // Check if Fetch is available
 (function checkFetch() {
@@ -28,7 +29,7 @@ function fetchData() {
 
       for (var i in dataResults) {
         var resultsList = document.getElementById("resultsUL");
-        
+
         resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
         resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
         resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
@@ -45,14 +46,12 @@ function fetchData() {
         resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
         resultsList.innerHTML += "<li><br></li>";
         
-        return document.getElementById("resultsUL").style.display = "inline-block";
+        resultsList.style.display = "inline-block";
       };
     } else {
-      alert("Working");
+      alert("Error:  Invalid US zipcode");
       document.getElementById("resultsUL").style.display = "none";
     }
-
-
 
   })
   .catch(function(error) {
@@ -70,4 +69,10 @@ submitBtn.addEventListener("click", function(e) {
   e.preventDefault();
   fetchData();
   clearData();
+});
+
+// Reload website by clicking main title
+h2.addEventListener("click", function(e) {
+  e.preventDefault();
+  window.location.reload(true);
 });

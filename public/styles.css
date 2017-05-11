@@ -61,6 +61,7 @@ strong {
 
 body {
 	background-color: #EF6461;
+  font-family: sans-serif;
 }
 
 header {
@@ -75,17 +76,16 @@ h2 {
 	position: absolute;
   color: #FFF;
   font-size: 2em;
-  font-family: monospace;
   font-weight: 700;
   line-height: 50px;
   margin: 0 0 0 10px;
+  cursor: pointer;
 }
 
 h1 {
   text-align: center;
   font-size: 3em;
   font-weight: bold;
-  font-family: 'Work Sans', sans-serif;
   font-style: italic;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
   margin: 10px 0;
@@ -144,7 +144,6 @@ span {
   left: 10px;
   top: 55px;
   font-weight: 700;
-  font-family: monospace;
 }
 
 a {
@@ -165,6 +164,5 @@ a {
 
 li {
   font-size: 2em;
-  font-family: monospace;
   line-height: 1.5;
 }
