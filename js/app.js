@@ -31,6 +31,7 @@ function fetchData() {
       resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
       resultsList.innerHTML += "<li><strong>Title</strong>: " + dataResults[i]["title"] + "</li>";
       resultsList.innerHTML += "<li><strong>State</strong>: " + dataResults[i]["state_name"] + "</li>";
+      resultsList.innerHTML += "<li><strong>District</strong>: " + dataResults[i]["district"] + "</li>";
       resultsList.innerHTML += "<li><strong>Term Start</strong>: " + dataResults[i]["term_start"] + "</li>";
       resultsList.innerHTML += "<li><strong>Term End</strong>: " + dataResults[i]["term_end"] + "</li>";
       resultsList.innerHTML += "<li><strong>Phone</strong>: " + "<a href='tel:+'" + dataResults[i]["phone"] + ">" + dataResults[i]["phone"] + "</a>" + "</li>";
