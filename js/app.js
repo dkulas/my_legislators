@@ -28,6 +28,7 @@ function fetchData() {
 
       for (var i in dataResults) {
         var resultsList = document.getElementById("resultsUL");
+        
         resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
         resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
         resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
