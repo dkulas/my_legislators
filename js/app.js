@@ -46,7 +46,6 @@ function fetchData() {
         resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=https://www.facebook.com/"  + dataResults[i]["facebook_id"] +  ">Facebook</a></li>";
         resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
         resultsList.innerHTML += "<li><br></li>";
-        
         resultsList.style.display = "inline-block";
       };
     } else {
