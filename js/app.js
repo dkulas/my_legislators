@@ -16,9 +16,15 @@ function getZipcode() {
   return document.getElementById("zipcodeInput").value;
 };
 
+// jsonCallback
+
+function jsonCallback(data) {
+  return data;
+};
+
 // Fetch Data
 function fetchData() {
-  fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode())
+  fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode() + "&callback=?")
   .then(data => data.json())
   .then(data => {
 
