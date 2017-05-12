@@ -10,3 +10,9 @@ Legisearch
 4.  Hit the 'Enter' button on your keyboard
 
 5.  Enjoy the data that is displayed before your eyes
+
+**
+OR
+**
+
+Follow this link:  http://janitor-catches-50663.netlify.com/
