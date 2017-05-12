@@ -16,53 +16,112 @@ function getZipcode() {
   return document.getElementById("zipcodeInput").value;
 };
 
-// jsonCallback
+// function fetchData2() {
+//   fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode() + "&callback=?").then(function(response) {
+//     console.log(response.headers.get('Content-Type'));  
+//     console.log(response.headers.get('Date'));
 
-function jsonCallback(data) {
-  return data;
-};
+//     console.log(response.status);  
+//     console.log(response.statusText);  
+//     console.log(response.type);  
+//     console.log(response.url); 
+//   })
+// }
 
 // Fetch Data
 function fetchData() {
-  fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode() + "&callback=?")
-  .then(data => data.json())
-  .then(data => {
 
-    var dataResults = data.results;
+  // fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode(), myInit).then(function(response) {
+  //   console.log(response);
+  // });
 
-    console.log(dataResults);
+  $.ajax({
 
-    if (dataResults.length != 0) {
+      url: "https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode(),
+      dataType: "jsonp",
 
-      for (var i in dataResults) {
-        var resultsList = document.getElementById("resultsUL");
+      error: function(jqXHR, textStatus, errorThrown) {
 
-        resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
-        resultsList.innerHTML += "<li><strong>Title</strong>: " + dataResults[i]["title"] + "</li>";
-        resultsList.innerHTML += "<li><strong>State</strong>: " + dataResults[i]["state_name"] + "</li>";
-        resultsList.innerHTML += "<li><strong>District</strong>: " + dataResults[i]["district"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Term Start</strong>: " + dataResults[i]["term_start"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Term End</strong>: " + dataResults[i]["term_end"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Phone</strong>: " + "<a href='tel:+'" + dataResults[i]["phone"] + ">" + dataResults[i]["phone"] + "</a>" + "</li>";
-        resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
-        resultsList.innerHTML += "<li><strong>Email</strong>: <a href=mailto:" + dataResults[i]["oc_email"] + ">" + dataResults[i]["oc_email"] + "</a></li>";
-        resultsList.innerHTML += "<li><strong>Website</strong>: <a href=" + dataResults[i]["website"] + ">Website</a></li>";
-        resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=https://www.facebook.com/"  + dataResults[i]["facebook_id"] +  ">Facebook</a></li>";
-        resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
-        resultsList.innerHTML += "<li><br></li>";
-        resultsList.style.display = "inline-block";
-      };
-    } else {
-      alert("Error:  Invalid US zipcode");
-      document.getElementById("resultsUL").style.display = "none";
-    }
+        console.log(errorThrown);
 
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+      },
+
+      success: function(parsed_json) {
+
+        var dataResults = parsed_json.results;
+        console.log(dataResults);
+
+        if (dataResults.length != 0) {
+
+          for (var i in dataResults) {
+            var resultsList = document.getElementById("resultsUL");
+
+            resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
+            resultsList.innerHTML += "<li><strong>Title</strong>: " + dataResults[i]["title"] + "</li>";
+            resultsList.innerHTML += "<li><strong>State</strong>: " + dataResults[i]["state_name"] + "</li>";
+            resultsList.innerHTML += "<li><strong>District</strong>: " + dataResults[i]["district"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Term Start</strong>: " + dataResults[i]["term_start"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Term End</strong>: " + dataResults[i]["term_end"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Phone</strong>: " + "<a href='tel:+'" + dataResults[i]["phone"] + ">" + dataResults[i]["phone"] + "</a>" + "</li>";
+            resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
+            resultsList.innerHTML += "<li><strong>Email</strong>: <a href=mailto:" + dataResults[i]["oc_email"] + ">" + dataResults[i]["oc_email"] + "</a></li>";
+            resultsList.innerHTML += "<li><strong>Website</strong>: <a href=" + dataResults[i]["website"] + ">Website</a></li>";
+            resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=https://www.facebook.com/"  + dataResults[i]["facebook_id"] +  ">Facebook</a></li>";
+            resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
+            resultsList.innerHTML += "<li><br></li>";
+            resultsList.style.display = "inline-block";
+          };
+        } else {
+          alert("Error:  Invalid US zipcode");
+          document.getElementById("resultsUL").style.display = "none";
+        }
+
+      },
+
+      complete: function() {
+        console.log("Completed");
+      }
+    });
+
+  // fetch("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + getZipcode()).then(data => data.json()).then(data => { 
+
+  //   var dataResults = data.results;
+
+  //   console.log(dataResults);
+
+  //   if (dataResults.length != 0) {
+
+  //     for (var i in dataResults) {
+  //       var resultsList = document.getElementById("resultsUL");
+
+  //       resultsList.innerHTML += "<li><strong>Name</strong>: " + dataResults[i]["first_name"] + " " + dataResults[i]["last_name"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Party</strong>: " + dataResults[i]["party"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Chamber</strong>: " + dataResults[i]["chamber"].charAt(0).toUpperCase() + dataResults[i]["chamber"].slice(1); + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Title</strong>: " + dataResults[i]["title"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>State</strong>: " + dataResults[i]["state_name"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>District</strong>: " + dataResults[i]["district"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Term Start</strong>: " + dataResults[i]["term_start"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Term End</strong>: " + dataResults[i]["term_end"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Phone</strong>: " + "<a href='tel:+'" + dataResults[i]["phone"] + ">" + dataResults[i]["phone"] + "</a>" + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Fax</strong>: " + dataResults[i]["fax"] + "</li>";
+  //       resultsList.innerHTML += "<li><strong>Email</strong>: <a href=mailto:" + dataResults[i]["oc_email"] + ">" + dataResults[i]["oc_email"] + "</a></li>";
+  //       resultsList.innerHTML += "<li><strong>Website</strong>: <a href=" + dataResults[i]["website"] + ">Website</a></li>";
+  //       resultsList.innerHTML += "<li><strong>Facebook</strong>: <a href=https://www.facebook.com/"  + dataResults[i]["facebook_id"] +  ">Facebook</a></li>";
+  //       resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
+  //       resultsList.innerHTML += "<li><br></li>";
+  //       resultsList.style.display = "inline-block";
+  //     };
+  //   } else {
+  //     alert("Error:  Invalid US zipcode");
+  //     document.getElementById("resultsUL").style.display = "none";
+  //   }
+
+  // })
+  // .catch(function(error) {
+  //   console.log(error);
+  // });
 };
 
 // Clear data on subsequent calls
