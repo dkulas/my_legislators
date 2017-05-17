@@ -55,6 +55,14 @@ table {
 /*******************/
 /*******************/
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 strong {
   font-weight: 700;
 }
@@ -93,12 +101,13 @@ h1 {
 
 form {
 	display: block;
-  text-align: right;
+  text-align: -webkit-right;
   border-radius: 3px;
   margin: 10px 0 0 0;
 }
 
 #zipcodeInput {
+  display: block;
   background-color: #fff;
   color: #0e0e0f;
   padding: 7px 30px 7px 10px;

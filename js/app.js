@@ -47,7 +47,7 @@ function fetchData() {
           resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
           resultsList.innerHTML += "<li>--------------------------------</li>";
           resultsList.innerHTML += "<li><br></li>";
-          resultsList.style.display = "inline-block";
+          resultsList.style.display = "block";
         };
       } else {
         alert("Error:  Invalid US zipcode");
