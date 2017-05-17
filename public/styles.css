@@ -153,8 +153,6 @@ a {
 }
 
 #resultsUL {
-  display: block;
-  width: 50%;
   background-color: #e8e9eb;
   padding: 10px;
   border-radius: 3px;
