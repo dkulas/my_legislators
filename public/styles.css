@@ -69,7 +69,8 @@ h2 {
   color: #FFF;
   font-size: 2em;
   font-weight: 700;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0;
+  padding: 7px 30px 7px 10px;
   cursor: pointer;
   text-shadow: 2px 2px 1px rgba(1, 1, 1, 1);
 }
@@ -185,10 +186,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -212,10 +217,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -239,10 +248,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -267,10 +280,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -294,10 +311,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -321,10 +342,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -349,10 +374,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -376,10 +405,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -403,10 +436,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -431,10 +468,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -458,10 +499,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
@@ -485,10 +530,14 @@ li {
 
     #zipcodeInput {
       width: 100px;
+      margin: 0;
     }
 
     #submitBtn {
       display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding: 0;
     }
 
     #resultsUL {
