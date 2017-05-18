@@ -72,8 +72,8 @@ body {
   font-family: sans-serif;
 }
 
-h2 {
-	position: absolute;
+#h1a, #h1b {
+  display: inline-block;
   color: #FFF;
   font-size: 2em;
   font-weight: 700;
@@ -83,14 +83,9 @@ h2 {
   text-shadow: 2px 2px 1px rgba(1, 1, 1, 1);
 }
 
-div {
-  width: 100%;
+#h1b {
   text-align: center;
-}
-
-h1 {
-  text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   font-style: italic;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
@@ -99,31 +94,30 @@ h1 {
   margin: 10px auto;
 }
 
-form {
+span {
 	display: block;
-  text-align: -webkit-right;
-  border-radius: 3px;
-  margin: 10px 0 0 0;
+  text-align: center;
 }
 
 #zipcodeInput {
   display: block;
   background-color: #fff;
-  color: #0e0e0f;
+  color: black;
+  margin: 0 auto;
   padding: 7px 30px 7px 10px;
-  width: 220px;
-  border-color: #eeeeee;
-  box-shadow: inset 0 3px 9px rgba(0,0,0,0.08);
-  border-radius: 3px;
+  border: none;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   outline: none;
-  margin-right: 10px;
 }
 
 #submitBtn {
-	display: none;
+	display: block;
+  margin: 5px auto;
+  border: none;
+  background: #fff;
+  font-weight: bold;
 }
 
 .tooltip {
@@ -143,16 +137,6 @@ form {
   position: absolute;
   z-index: 98;
   width: 220px;
-}
-
-span {
-  width: 100%;
-  display: block;
-  color: #FFF;
-  position: absolute;
-  left: 10px;
-  top: 55px;
-  font-weight: 700;
 }
 
 a {
@@ -185,24 +169,12 @@ li {
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -212,24 +184,12 @@ li {
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -239,24 +199,12 @@ li {
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -267,24 +215,12 @@ li {
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -294,24 +230,12 @@ li {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -321,24 +245,12 @@ li {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -349,24 +261,12 @@ li {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -376,24 +276,12 @@ li {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -403,24 +291,12 @@ li {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -431,24 +307,12 @@ li {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -458,24 +322,12 @@ li {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }
 
@@ -485,23 +337,11 @@ li {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-    h1#h1 {
+    h1 {
       font-size: 1em;
     }
 
-    h2 {
-      font-size: 1.5em;
-    }
-
-    #zipcodeInput {
-      width: 100px;
-      margin: 0;
-    }
-
-    #submitBtn {
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      padding: 0;
+    #resultsUL {
+      width: 100%;
     }
 }

@@ -7,16 +7,17 @@
 	<link rel="stylesheet" type="text/css" href="public/styles.css">
 </head>
 <body>
-<h2 id="h2">Legisearch</h2><!-- <span><a href="#">about</a> | <a href="#">contact</a> | 2017</span> -->
-<form id="getZip" method="get">
-  <input type="tel" name="zipcode" id="zipcodeInput" class="tooltip" placeholder="Find Legislators" autocomplete="off" title="Enter valid US zipcode">
-  <input type="submit" form="getZip" value="&#8250;" id="submitBtn">
-</form>
+<span>
+  <h1 id="h1a">Legisearch</h1>
+  <h1 id="h1b">Know Your Legislators!</h1>
+</span>
 
-
-<div>
-  <h1 id="h1">Know Your Legislators!</h1>
-</div>
+<section id="formSection">
+  <form id="getZip" method="get">
+    <input type="tel" name="zipcode" id="zipcodeInput" class="tooltip" placeholder="Find Legislators" autocomplete="off" title="Enter valid US zipcode" autofocus="true">
+    <input type="submit" form="getZip" value="&#8250;" id="submitBtn">
+  </form>
+</section>
 
 <ul id="resultsUL">
 </ul>

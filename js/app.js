@@ -1,6 +1,6 @@
 var submitBtn = document.getElementById("submitBtn");
-var h2 = document.getElementById("h2");
-var h1 = document.getElementById("h1");
+var h1b = document.getElementById("h1b");
+var h1a = document.getElementById("h1a");
 
 // Isolate zipcode
 function getZipcode() {
@@ -47,7 +47,7 @@ function fetchData() {
           resultsList.innerHTML += "<li><strong>Twitter</strong>: <a href=https://www.twitter.com/@"  + dataResults[i]["twitter_id"] +  ">Twitter</a></li>";
           resultsList.innerHTML += "<li>--------------------------------</li>";
           resultsList.innerHTML += "<li><br></li>";
-          resultsList.style.display = "block";
+          resultsList.style.display = "inline-block";
         };
       } else {
         alert("Error:  Invalid US zipcode");
@@ -75,12 +75,12 @@ submitBtn.addEventListener("click", function(e) {
 });
 
 // Reload website by clicking main title
-h2.addEventListener("click", function(e) {
+h1a.addEventListener("click", function(e) {
   e.preventDefault();
   window.location.reload(true);
 });
 
-h1.addEventListener("click", function(e) {
+h1b.addEventListener("click", function(e) {
   e.preventDefault();
   alert("Welcome to Legisearch!\n\nGovernment can be a mess.  Long lines, phone prompts, the list goes on.  When you need to get in touch with your state Representatives, getting their contact information shouldn't be so difficult.\n\nKnowing who represents you (and your family) is important.\n\nKnowing the contact-information for those publicly-elected officials who say they're representing you is oftentimes more difficult to come across.\n\nNo longer.  Now, with the help of this website and the Sunlight Labs Congress API, you can search for your representatives' contact information simply by entering your zipcode\n\nEnjoy!");
 });
