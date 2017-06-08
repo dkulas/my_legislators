@@ -68,7 +68,7 @@ strong {
 }
 
 body {
-	background-color: #EF6461;
+	background-color: gainsboro;
   font-family: sans-serif;
 }
 
@@ -99,8 +99,12 @@ span {
   text-align: center;
 }
 
+form#getZip {
+  text-align: center;
+}
+
 #zipcodeInput {
-  display: block;
+  display: inline-block;
   background-color: #fff;
   color: black;
   margin: 0 auto;
@@ -113,7 +117,7 @@ span {
 }
 
 #submitBtn {
-	display: block;
+	display: inline-block;
   margin: 5px auto;
   border: none;
   background: #fff;
