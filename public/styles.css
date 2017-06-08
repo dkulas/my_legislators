@@ -68,6 +68,8 @@ strong {
 }
 
 body {
+  height: 100vh;
+  background: url(seal.png) center center no-repeat;
 	background-color: gainsboro;
   font-family: sans-serif;
 }
