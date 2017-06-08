@@ -122,6 +122,7 @@ form#getZip {
   border: none;
   background: #fff;
   font-weight: bold;
+  height: 29px;
 }
 
 .tooltip {
